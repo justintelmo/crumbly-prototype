@@ -4,7 +4,6 @@ import os
 api_key = os.environ['YELP_API_KEY']
 
 client = yelpapi.Client(api_key)
-
     
 def search_yelp(restaurant_name): 
     response = client.search(term=restaurant_name, location='Fremont, CA')
