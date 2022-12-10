@@ -10,7 +10,7 @@ def search_yelp(restaurant_name):
     business = response['businesses'][0]
     rating = business['rating']
     review_count = business['review_count']
-    reviews = client.reviews_query(business['id'], {'locale': 'en', 'limit': 20})
+    reviews = client.reviews_query(business['id'])
     
     
     return {
