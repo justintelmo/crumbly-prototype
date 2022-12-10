@@ -6,7 +6,7 @@ api_key = os.environ.get('YELP_API_KEY', None)
 client = YelpAPI(api_key)
     
 def search_yelp(restaurant_name): 
-    response = client.search(term=restaurant_name, location='Fremont, CA')
+    response = client.search_query(term=restaurant_name, location='fremont, ca', sort_by='rating', limit=5)
     business = response['businesses'][0]
     rating = business['rating']
     review_count = business['review_count']
