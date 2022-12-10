@@ -18,7 +18,7 @@ def search_yelp(restaurant_name):
         'business_id': business['id'],
         'rating': rating,
         'review_count': review_count,
-        'reviews': [{'user': review['user']['name'], 'text': review['text']} for review in reviews['reviews']]
+        'reviews': reviews['reviews']
     }
     # return {
     #     'name': business['name'],
