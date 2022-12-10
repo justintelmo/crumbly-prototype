@@ -1,9 +1,9 @@
-import yelpapi
+from yelpapi import YelpAPI
 import os
 
-api_key = os.environ['YELP_API_KEY']
+api_key = os.environ.get('YELP_API_KEY', None)
 
-client = yelpapi.Client(api_key)
+client = YelpAPI(api_key)
     
 def search_yelp(restaurant_name): 
     response = client.search(term=restaurant_name, location='Fremont, CA')
