@@ -14,10 +14,7 @@ def search_yelp(restaurant_name):
     
     
     return {
-        'business_name': business['name'],
-        'business_id': business['id'],
-        'rating': rating,
-        'review_count': review_count,
+        'business': business,
         'reviews': reviews['reviews']
     }
     # return {
